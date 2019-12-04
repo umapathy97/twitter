@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title>self  <%= yield(:title) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+  </head>
+  <body>
+   <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+                     <center> <%= link_to "Twitter", home_path, id: "logo" %></center>
+                     <%= stylesheet_link_tag "custom" %>
+      <nav>
+        <ul class="nav pull-right">
+      
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      
+    </div>
+  </body>
+</html>

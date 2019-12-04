@@ -1,0 +1,29 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+  <div id="container"></div>
+  
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= gravatar_for user%>
+      <%= link_to user.name, user %>
+      </li>
+      <li><%= pluralize(user.microposts.count, "microposts") %>
+      	<li>
+      		
+      <%= user.followers.count %> Followers
+  
+      	</li>
+     <div> </div>
+
+
+  </li>
+
+      
+    
+  <% end %>
+
+</ul>
+    
+<%= will_paginate %> 

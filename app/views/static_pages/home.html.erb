@@ -1,0 +1,37 @@
+<% if signed_in? %>
+  <div class ="row">
+    <aside class="span4">
+      <div>
+      <section>
+          
+        <%= render 'shared/user_info' %>
+      </section>
+    </div>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h4>Welcome to the Twitter</h4>
+
+
+    <%= link_to "Sign up now!", signup_path,
+                                class: "btn btn-large btn-primary" %>
+
+                      
+  </div>
+
+  
+<% end %>
